@@ -18,6 +18,25 @@ header{
     border-bottom-left-radius: 3%;
     border-bottom-right-radius: 3%;
     border-bottom: solid 0.5rem var(--primary-color);
+    .icon-area{
+        border-radius: 100vmax;
+        border: solid 0.25rem var(--primary-color);
+        padding: 1rem;
+        margin: 0.45rem;
+    }
+    .content-buttons{
+        border-radius: 100vmax;
+        border: solid 0.25rem var(--primary-color);
+        padding: 0.25rem;
+        margin: 0.25rem;
+
+    }
+    .account-buttons{
+        border-radius: 100vmax;
+        border: solid 0.25rem var(--primary-color);
+        padding: 0.25rem;
+        margin: 0.25rem;
+    }
     nav{
         padding-left: 3rem;
         padding-right: 3rem;
@@ -135,6 +154,10 @@ header{
             
         }
         .text-container-3{
+            p{
+                padding-left: 0.25rem;
+                border-left: solid var(--primary-bg-color) thin;
+            }
             display: grid;
             gap: 1rem;            
             grid-template-columns: 0.75fr 2fr 1.5fr;
@@ -152,13 +175,25 @@ footer{
     background-color: var(--primary-color);
     color: var(--primary-bg-color);
     text-align: center;
-    padding-top: 1rem;
     margin: 0;
     margin-top: 1rem;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;;
     border-top-left-radius: 3%;
     border-top-right-radius: 3%;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+
     p{
+        border-left: solid var(--primary-bg-color) thin;
+        padding: 1rem;
+    }
+    svg{
+        border-left: solid var(--primary-bg-color) thin;
         padding: 1rem;
     }
     .icon{
@@ -169,6 +204,7 @@ footer{
         fill: var(--primary-bg-color);
         font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;display:inline;fill-opacity:1;stroke:none;stroke-opacity:1
     }
+
 }
 @media(max-width: 1411px){
     header{
@@ -203,6 +239,14 @@ footer{
     .container-3{
         padding: 0.5rem;
     }
+    footer{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        text-align: center;
+        justify-content: space-between;
+    }
+    
 }
 
 @media(max-width: 768px){
@@ -216,6 +260,14 @@ footer{
             img{
                 width: 100%;
             }
+        }
+        .icon-area{
+            padding: 1rem;
+        }
+        .content-buttons{
+            display: flex;
+            flex-direction: column;
+            padding: 0;
         }
         .button-normal{
             font-size: 0.9rem;
@@ -259,7 +311,7 @@ footer{
     footer{
         display: flex;
         flex-direction: row;
-        padding-left: 1rem;
+        padding: 1rem;
         text-align: center;
         justify-content: space-between;
     }

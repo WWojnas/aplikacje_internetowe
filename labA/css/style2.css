@@ -22,23 +22,28 @@ header{
         padding-left: 3rem;
         padding-right: 3rem;
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
     }
-    .button-normal{
-        background-color: transparent;
-        border: none;
-        font-weight: bold;
-        color: var(--primary-color);
-        padding: 1rem;
-        margin: 1rem;
-        font-size: 1rem;
+    .content-buttons{
+        display: flex;
+        flex-direction: column;
+        .button-normal{
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+            color: var(--primary-color);
+            padding: 0.5rem;
+            margin: 0.5rem;
+            font-size: 1rem;
+            
+        }
     }
     a{
-        text-decoration: none;
-        color: var(--primary-color);
+        color: var(--primary-color);  
     }
+
     a:visited{
         color: var(--primary-color);
     }
@@ -90,6 +95,7 @@ header{
                 font-size: 2.5rem;
                 font-weight: 800;
                 color: var(--primary-bg-color);
+                text-decoration: underline var(--primary-bg-color);
             }
             
             span{
@@ -125,6 +131,7 @@ header{
         border: var(--primary-color) 1rem solid;
     }
     h3{
+        text-decoration: overline wavy var(--primary-color);
         font-size: 1.5rem;
     }
     p{
@@ -169,6 +176,9 @@ header{
         ul{
             color: var(--color-5);
             font-size: 1.15rem;
+            list-style-type: square;
+            background: var(--primary-color);
+            border-radius: 1rem;
         }
         div{
             padding: 1rem;
@@ -215,7 +225,7 @@ footer{
         padding: 0;
         nav{
             padding: 0;
-            flex-direction: column;
+            flex-direction: column-reverse;
             font-size: 0.8rem;
             img{
                 display: none;
@@ -242,7 +252,7 @@ footer{
         padding: 0;
         nav{
             padding: 0;
-            flex-direction: column;
+            flex-direction: column-reverse;
             font-size: 0.6rem;
             img{
                 display: none;
