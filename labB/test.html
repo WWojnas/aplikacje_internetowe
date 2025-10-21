@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Text</title>
+    <style>
+        .editable {
+            cursor: pointer;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="editable-text" class="editable">Click to edit this text</div>
+
+    <script>
+        // Get the element you want to make editable
+const editableElement = document.getElementById("editable-text");
+
+// Function to convert the text into an input field
+function makeEditable() {
+    const currentText = editableElement.textContent;
+
+    // Create an input element
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = currentText;  // Set the input value to the current text content
+
+    // Replace the text with the input field
+    editableElement.innerHTML = "";  // Clear the content
+    editableElement.appendChild(input);
+
+    // Focus on the input field
+    input.focus();
+
+    // Add an event listener to save changes when the user clicks outside
+    document.addEventListener("click", function(event) {
+        // Check if the clicked target is outside the span
+        if (!span.contains(event.target)) {
+            save(id);  // Trigger save when clicked outside the span
+        }
+    });
+}
+
+// Function to save the changes made to the input field
+function saveChanges(event) {
+    const newContent = event.target.value;
+
+    // Set the content back to the editable element as text
+    editableElement.innerHTML = newContent;
+
+    // Optionally, you can add a check to prevent saving empty text
+    if (newContent.trim() === "") {
+        editableElement.innerHTML = "Click to edit this text";  // Reset if it's empty
+    }
+}
+
+// Add event listener for the click event to make the element editable
+editableElement.addEventListener("click", makeEditable);
+
+    </script>
+</body>
+</html>

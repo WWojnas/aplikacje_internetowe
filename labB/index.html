@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+		<title> LabB </title>
+		<meta charset="UTF-8">
+		<link href="css/style.css" rel="stylesheet">
+    </head>
+	<body>
+        <div class="container">
+            <h1> TODO lista </h1>
+            <div class="search-bar">
+                <label for="search-bar-input"> Search </label>
+                <input type="text" name="search-bar-input" id="search-bar" onchange="search()">
+            </div>
+            <div class="list" id="list">
+
+            </div>
+            <div class="new-entry">
+                <label for="new-entry-content"> TODO: </label>
+                <input type="text" maxlength="255" name="new-entry-content" id="new-entry-content">
+                <label for="new-entry-date"> Data: </label>
+                <input type="date" name="new-entry-date" id="new-entry-date">
+                <button name="new-entry-add" onclick="add()"> Dodaj </button>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/script.js"></script> 
+    </body>
+</html>
